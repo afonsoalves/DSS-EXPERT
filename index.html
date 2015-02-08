@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html manifest="offlinedatabase.manifest">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+      <title>DSS EXPERT</title>
+	  
+	  <link rel="stylesheet" type="text/css" href="estilo.css">
+	  <link rel="stylesheet" href="teste/jquery.mobile-1.4.5.min.css" />
+	  <script src="teste/jquery-1.11.1.min.js"></script>
+	  <script src="teste/jquery.mobile-1.4.5.min.js"></script>
+	  
+	  
+		<script>
+			$(function($){
+				$('#calcular').click(function(){
+			 
+					var nome = $('#distancia').val();
+					var idade = $('#largura').val();
+			 
+					var res = (nome/idade)*4.8;  				 
+					$('#resultado').val(res);
+					$("#resultado").attr('type','text');
+					
+
+				});
+				$('#wd1').click(function(){
+				 
+						var camera = $('#cameras').val();
+						var hora = $('#horas').val();
+				 
+						var res = (camera/hora);
+						$('#resultadohd').val(res);
+						$("#resultadohd").attr('type','text');
+						
+				});
+				$('#hd').click(function(){
+				 
+						var camera = $('#cameras').val();
+						var hora = $('#horas').val();
+				 
+						var res = (camera/hora);
+						$('#resultadohd').val(res);
+						$("#resultadohd").attr('type','text');
+						
+				});
+				$('#full').click(function(){
+				 
+						var camera = $('#cameras').val();
+						var hora = $('#horas').val();
+				 
+						var res = (camera/hora);
+						$('#resultadohd').val(res);
+						$("#resultadohd").attr('type','text');
+						$("#resultadohd").attr('style','color:red');
+				});
+			});
+
+		</script>
+   </head>
+   <body>
+	   <div data-role="page" id="inicio">		
+			<div data-role="header" id="header" >DSS - Digital Sistemas de Segurança</div>	
+					<div data-role="content">
+						<a href="#calculalente" data-role="button" data-icon="">CALCULA LENTE</a>			
+						<a href="#calculahd" data-role="button" data-icon="">CALCULA HD</a>
+						<a href="https://v2.zopim.com/widget/livechat.html?key=2LgYFBl5zZEz4PbMDFTlOrnLHSqnZKoZ=&lang=pt" data-role="button">CHAT ONLINE</a>
+					</div>				
+				<div data-role="footer" id="footer" class="footer"/>dss.ind.br</div>
+		</div><!--inicio-->
+		
+		<div data-role="page" id="calculalente">
+			<div data-role="header" id="header" class="header">
+				DSS - Digital Sistemas de Segurança
+			</div>
+				<div id="formula">
+					<form>
+						<label for="distancia">Distância:</label>
+						<input type="range" name="distancia" id="distancia" value="10" min="0" max="200" step="1" data-highlight="true">
+						<label for="largura">Largura:</label>
+						<input type="range" name="largura" id="largura" value="5" min="0" max="20" step="1" data-highlight="true">
+						<button type="button" id="calcular">CALCULAR</button>
+						<div class="ui-grid-b">
+							<div class="ui-block-a"></div>
+							<center><div class="ui-block-b"><input type="hidden" id="resultado" size="5" class="input" value=""></div></center>
+							<div class="ui-block-c"></div>					
+						</div>										
+						<input type="hidden" id="resultado" id="text-basic" value="">					
+					</form>	
+					<a href="#inicio" data-role="button">VOLTAR</a>
+				</div>		
+		</div><!--calculalente-->
+		
+		<div data-role="page" id="calculahd">
+			<div data-role="header" id="header" class="header">
+				<h1>DSS - Digital Sistemas de Segurança</h1>
+			</div>
+			<div id="formula">
+				<form>
+					<label for="cameras">Câmeras:</label>
+					<input type="range" name="cameras" id="cameras" value="8" min="0" max="32" step="4" data-highlight="true">
+					<label for="horas">Horas Por Dia:</label>
+					<input type="range" name="horas" id="horas" value="8" min="0" max="24" step="1" data-highlight="true">
+						<div class="ui-grid-b">
+							<div class="ui-block-a"><button type="button" id="wd1">WD1</button></div>
+							<div class="ui-block-b"><button type="button" id="hd">HD</button></div>
+							<div class="ui-block-c"><button type="button" id="full">FULL HD</button></div>
+							<div class="ui-block-a"></div>
+							<div class="ui-block-b"><input type="hidden" style="" id="resultadohd" size="5" class="input" value=""></div>
+							<div class="ui-block-c"></div>
+						</div>			
+					<input type="hidden" style="" id="resultadohd" id="text-basic" value="">					
+				</form>	
+			<a href="#inicio" data-role="button">VOLTAR</a>
+			</div>			
+		</div><!--calculalente-->
+		
+		
+		
+   </body>
+</html>

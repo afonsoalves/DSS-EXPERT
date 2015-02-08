@@ -1,0 +1,25 @@
+#inicio {
+    background-image: url("img/fundo1.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/*#header {
+    background-color:black;font-family:arial;
+}
+#footer {
+    background-color:black;font-family:arial;	
+}*/
+#calculalente {
+    background-image: url("img/fundo2.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#calculahd {
+    background-image: url("img/fundo2.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.input{text-align:center;font-size:18px;color:#CC0000;border:radios;}
+/*.header{font-size:10px;text-align:center;}
+.footer{font-size:20px;text-align:center;}*/
